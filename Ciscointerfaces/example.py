@@ -5,4 +5,4 @@ from pyciscomanager import PyCiscoManager
 mgr = PyCiscoManager('127.0.0.1', 'myUsername', 'myPassword', 22, 'mySecret')
 
 #I can now call functions, the available functions and how to use them are on GITHUBLINKHERE
-print(mgr.get_uptime())
+mgr.unused_interfaces(days=2)
