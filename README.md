@@ -5,7 +5,7 @@ I created this script to return interfaces that are not in used for either x amo
 
 Currently, there isn't a setup.py so if you just download all the needed files and ensure you have the following modules: textfsm and netmiko. You can import the file, here is an example:
 
-```
+```py
 from pyciscomanager import PyCiscoManager
 
 mgr = PyCiscoManager('192.2.0.2', 'yourUsername', 'yourPassword', 22, 'yourSecret')
