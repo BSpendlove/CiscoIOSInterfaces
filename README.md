@@ -11,3 +11,56 @@ from pyciscomanager import PyCiscoManager
 mgr = PyCiscoManager('192.2.0.2', 'yourUsername', 'yourPassword', 22, 'yourSecret')
 mgr.unused_interfaces(weeks=8)
 ```
+
+## Class Functions
+
+### get_hostname
+- Will return the hostname
+
+```
+device = mgr.get_hostname()
+print(device)
+
+Example:
+SW01
+```
+
+### unused_interfaces(weeks=None,days=None)
+- Will print interfaces that have not seen any output starting with x weeks or x days (weeks or days, only one works at a time)
+
+```
+mgr.unused_interfaces(weeks=4)
+```
+OR
+```
+mgr.unused_interfaces(days=2)
+```
+
+If interface hasn't seen traffic input or output, it will notify you.
+
+### get_ios_version_template
+- Will return 'show version' information in JSON type format related to things like IOS Version, serial number, boot time etc..., there are additional functions that use this to get more specific information
+
+### get_cdp_neighbors_detail_template
+- Will return CDP neighbors in JSON format
+
+### get_vlans_template
+- Will return VLAN information and port members in JSON type format
+
+### get_interfaces
+- Will return interface information in JSON format
+
+### get_hardware_model
+- Will return hardware model
+
+### get_running_ios_image
+- Will return the current running IOS image
+
+### get_serial_number
+- Will return the serial number of the device
+
+### get_uptime
+- Will return the uptime of the device
+
+### get_version
+- Will return IOS version of the device
