@@ -9,5 +9,5 @@ Currently, there isn't a setup.py so if you just download all the needed files a
 from pyciscomanager import PyCiscoManager
 
 mgr = PyCiscoManager('192.2.0.2', 'yourUsername', 'yourPassword', 22, 'yourSecret')
-mgr.unused_interfaces(weeks=4, days=0)
+mgr.unused_interfaces(weeks=8)
 ```
