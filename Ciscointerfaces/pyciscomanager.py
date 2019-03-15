@@ -43,6 +43,7 @@ class PyCiscoManager(object):
 
         all_interfaces_json = self.get_interfaces()
 
+        print("Device uptime: " + self.get_uptime() + "\n")
         for x in all_interfaces_json:
             if x['last_input'] == 'never':
                 if x['last_output'] == 'never':

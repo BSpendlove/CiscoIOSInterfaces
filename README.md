@@ -28,15 +28,29 @@ SW01
 ### unused_interfaces(weeks=None,days=None)
 - Will print interfaces that have not seen any output starting with x weeks or x days (weeks or days, only one works at a time)
 
-```
+```py
 mgr.unused_interfaces(weeks=4)
 ```
 OR
-```
+```py
 mgr.unused_interfaces(days=2)
 ```
 
 If interface hasn't seen traffic input or output, it will notify you.
+
+```Example:
+Device uptime: 1 week, 20 hours, 11 minutes
+
+Interface: G1/0/10 has seen no traffic since last interface counter clear/reboot
+Last Input: never
+Last Output: never
+Last Output Hang: never
+
+Interface: G1/0/23 has seen no traffic since last interface counter clear/reboot
+Last Input: never
+Last Output: never
+Last Output Hang: never
+```
 
 ### get_ios_version_template
 - Will return 'show version' information in JSON type format related to things like IOS Version, serial number, boot time etc..., there are additional functions that use this to get more specific information
